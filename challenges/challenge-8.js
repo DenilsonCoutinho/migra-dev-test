@@ -18,12 +18,16 @@ function fetchData(id) {
     setTimeout(() => {
       console.log(`Dados do ID ${id} recebidos.`);
       resolve();
-    }, Math.random() * 1000);
+    }, Math.random() * 4000);
   });
 }
 
-const ids = [1, 2, 3, 4, 5];
+const ids = [1, 2, 3 , 4, 5];
 
-ids.forEach(async (id) => {
-  await fetchData(id);
-});
+for(const idsI of ids){
+    await fetchData(idsI);
+}
+
+// ids.forEach(async (id) => {
+//   await fetchData(id);
+// });

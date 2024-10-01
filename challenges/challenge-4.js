@@ -6,5 +6,13 @@ Por exemplo, "arara" e "ana" são palíndromos, enquanto "banana" não é.
 */
 
 export function isPalindrome(str) {
-  return;
+  const myStr = str.split("")
+  const lastIndexStr = myStr.pop()
+
+  if (lastIndexStr === myStr[0]) {
+    return true
+  }
+  return false
 }
+
+isPalindrome("arara")

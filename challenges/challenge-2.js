@@ -6,5 +6,12 @@ Por exemplo, dado o array [1, 2, 3, 2, 1, 4], o retorno deve ser [1, 2, 3, 4].
 */
 
 export function removeDuplicates(arr) {
-  return;
+  const newArray = new Set(arr)
+  // Set serve pra armazenar dados no JavaScript que permite obter apenas valores únicos.
+  const newInstanceArray = Array.from(newArray)
+  return newInstanceArray
 }
+
+
+const array = [1, 2, 3, 2, 1, 4]
+removeDuplicates(array)
